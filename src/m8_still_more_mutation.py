@@ -79,7 +79,11 @@ def RETURN_delete_negatives(numbers):
     #        print(new_list)
     #return new_list
 
-    
+    positive_numbers = []
+    for k in range(len(numbers)):
+        if numbers[k] >= 0:
+            positive_numbers.append(numbers[k])
+    return positive_numbers
 
 def run_test_MUTATE_delete_negatives():
     """ Tests the   MUTATE_delete_negatives   function. """
@@ -145,6 +149,14 @@ def MUTATE_delete_negatives(numbers):
     #       then ask for help as needed.
     # HINT #2: Why might it be wise to start at the end and
     #       work backwards through the list to the beginning?
+
+    for k in range(len(numbers) - 1, -1, -1):
+        if numbers[k] < 0:
+            del numbers[k]
+
+
+
+
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
