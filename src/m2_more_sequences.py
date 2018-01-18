@@ -16,9 +16,9 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    #run_test_shortest_string()
-    #run_test_index_of_largest_number()
-    #run_test_number_of_stutters()
+    run_test_shortest_string()
+    run_test_index_of_largest_number()
+    run_test_number_of_stutters()
     run_test_is_palindrome()
     run_test_count_same()
 
@@ -325,7 +325,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -337,14 +337,14 @@ def is_palindrome(s):
 
     forward_sequence = []
     backward_sequence = []
-
+    #print(s)
     for k in range(len(s)):
         forward_sequence.append(s[k])
         backward_sequence.append((s[(len(s) - 1) - k]))
-    #print(forward_sequence)
-    #print(backward_sequence)
-        if forward_sequence == backward_sequence:
-            return True
+    #print(k, forward_sequence)
+    #print(k, backward_sequence)
+    if forward_sequence == backward_sequence:
+        return True
     return False
 
 
